@@ -54,6 +54,9 @@ _ble.statusStream.listen((status) {
 
 Use ` _ble.status` to get the current status of the host device.
 
+See [BleStatus](https://github.com/PhilipsHue/flutter_reactive_ble/blob/master/lib/src/model/ble_status.dart) for
+more info about the meaning of the different statuses.
+
 ### Establishing connection
 
 To interact with a device you first need to establish a connection:
@@ -165,6 +168,17 @@ The Android OS maintains a table per device of the discovered service in cache. 
 await flutterReactiveBle.clearGattCache(foundDeviceId);
 ```
 
+### Contributing
+Feel free to open an new issue or a pull request to make this project better
+
+#### Setup
+
+This project uses melos to manage all the packages inside this repo.
+
+Install melos: `dart pub global activate melos`
+Setup melos to point to the dependencies in your local folder: `melos bootstrap`
+
+
 ### FAQ
 
 #### How to handle the BLE undeliverable exception
@@ -216,7 +230,13 @@ In case you are using ProGuard add the following snippet to your `proguard-rules
 -keep class com.signify.hue.** { *; }
 ```
 
-This will prevent issues like [#131](https://github.com/PhilipsHue/flutter_reactive_ble/issues/131) .
+This will prevent issues like [#131](https://github.com/PhilipsHue/flutter_reactive_ble/issues/131).
+
+#### Why doesn't the BLE stack directly connect to my peripheral
+
+Before you are able to execute BLE operations the BLE-stack of the device makes sure everything is setup correctly and then reports ready for operation. For some devices this takes a bit longer than for others. When starting the app make sure that the BLE-stack is properly initialized before you execute BLE operations. The safest way to do this is by listening to the `statusStream` and wait for `BleStatus.ready`.
+
+This will prevent issues like [#147](https://github.com/PhilipsHue/flutter_reactive_ble/issues/147).
 
 #### Unofficial example apps
 
