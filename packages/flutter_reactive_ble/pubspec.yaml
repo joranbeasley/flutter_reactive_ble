@@ -19,13 +19,13 @@ dependency_overrides:
   reactive_ble_mobile:
     git:
       url: https://github.com/LEMUSADR000/flutter_reactive_ble.git
-      ref: 9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb
+      ref: 54bde7deb7698d807c90ab5d096d034ef647254a
       path: packages/reactive_ble_mobile
 
   reactive_ble_platform_interface:
     git:
       url: https://github.com/LEMUSADR000/flutter_reactive_ble.git
-      ref: 9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb
+      ref: 54bde7deb7698d807c90ab5d096d034ef647254a
       path: packages/reactive_ble_platform_interface
 
 
