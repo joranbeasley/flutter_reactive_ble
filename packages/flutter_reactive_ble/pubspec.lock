@@ -372,8 +372,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/reactive_ble_mobile"
-      ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
-      resolved-ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
+      ref: "54bde7deb7698d807c90ab5d096d034ef647254a"
+      resolved-ref: "54bde7deb7698d807c90ab5d096d034ef647254a"
       url: "https://github.com/LEMUSADR000/flutter_reactive_ble.git"
     source: git
     version: "4.0.1"
@@ -381,8 +381,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/reactive_ble_platform_interface"
-      ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
-      resolved-ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
+      ref: "54bde7deb7698d807c90ab5d096d034ef647254a"
+      resolved-ref: "54bde7deb7698d807c90ab5d096d034ef647254a"
       url: "https://github.com/LEMUSADR000/flutter_reactive_ble.git"
     source: git
     version: "4.0.1"
