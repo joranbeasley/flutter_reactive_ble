@@ -30,6 +30,7 @@ void main() {
       late pb.Uuid serviceUuid1;
       late pb.Uuid serviceUuid2;
       late Uint8List manufacturerData;
+      late Uint8List rawScanRecordData;
       late ScanResult scanresult;
 
       setUp(() {
@@ -42,6 +43,7 @@ void main() {
         serviceUuid1 = pb.Uuid()..data = [2];
         serviceUuid2 = pb.Uuid()..data = [3];
         manufacturerData = Uint8List.fromList([1, 2, 3]);
+        rawScanRecordData = Uint8List.fromList([1, 2, 3, 4]);
 
         message = pb.DeviceScanInfo()
           ..id = id
@@ -50,7 +52,8 @@ void main() {
           ..serviceData.add(serviceDataEntry2)
           ..serviceUuids.add(serviceUuid1)
           ..serviceUuids.add(serviceUuid2)
-          ..manufacturerData = manufacturerData;
+          ..manufacturerData = manufacturerData
+          ..rawScanRecordData = rawScanRecordData;
 
         scanresult = sut.scanResultFrom(message.writeToBuffer());
       });
@@ -103,6 +106,14 @@ void main() {
                 success: (d) => d.manufacturerData,
                 failure: (_) => throw Exception()),
             manufacturerData);
+      });
+
+      test('converts raw scan record data', () {
+        expect(
+            scanresult.result.iif(
+                success: (d) => d.rawScanRecordData,
+                failure: (_) => throw Exception()),
+            rawScanRecordData);
       });
 
       group('given Scan fails', () {

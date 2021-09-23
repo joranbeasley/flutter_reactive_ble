@@ -16,6 +16,7 @@ message DeviceScanInfo {
     bytes manufacturerData = 6;
     repeated Uuid serviceUuids = 7;
     int32 rssi = 5;
+    bytes rawScanRecordData = 8;
 }
 
 message ConnectToDeviceRequest {

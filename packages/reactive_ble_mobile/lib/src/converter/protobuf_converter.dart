@@ -57,13 +57,13 @@ class ProtobufConverterImpl implements ProtobufConverter {
     return ScanResult(
       result: resultFrom(
         getValue: () => DiscoveredDevice(
-          id: message.id,
-          name: message.name,
-          serviceData: serviceData,
-          serviceUuids: serviceUuids,
-          manufacturerData: Uint8List.fromList(message.manufacturerData),
-          rssi: message.rssi,
-        ),
+            id: message.id,
+            name: message.name,
+            serviceData: serviceData,
+            serviceUuids: serviceUuids,
+            manufacturerData: Uint8List.fromList(message.manufacturerData),
+            rssi: message.rssi,
+            rawScanRecordData: Uint8List.fromList(message.rawScanRecordData)),
         failure: genericFailureFrom(
             hasFailure: message.hasFailure(),
             getFailure: () => message.failure,
