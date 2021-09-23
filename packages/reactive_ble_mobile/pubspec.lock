@@ -351,8 +351,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/reactive_ble_platform_interface"
-      ref: "5aed9b0fab33e01d9d44c0bac23342c8bbfd6524"
-      resolved-ref: "5aed9b0fab33e01d9d44c0bac23342c8bbfd6524"
+      ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
+      resolved-ref: "9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb"
       url: "https://github.com/LEMUSADR000/flutter_reactive_ble.git"
     source: git
     version: "4.0.1"

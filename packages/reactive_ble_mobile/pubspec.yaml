@@ -11,7 +11,7 @@ dependency_overrides:
   reactive_ble_platform_interface:
     git:
       url: https://github.com/LEMUSADR000/flutter_reactive_ble.git
-      ref: 5aed9b0fab33e01d9d44c0bac23342c8bbfd6524
+      ref: 9ab32e5f8eacdb99441fe013ecb6462ebe5c35bb
       path: packages/reactive_ble_platform_interface
 
 dependencies:
